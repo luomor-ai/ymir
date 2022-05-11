@@ -65,3 +65,9 @@ docker run -p 9000:9000 --name minio \
 -v /home/data:/data \
 -v /home/config:/root/.minio \
 minio/minio server /data
+
+label_redis_1          | INFO  ==> ** Starting Redis **
+label_redis_1          | 1:C 11 May 2022 10:19:21.529 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+label_redis_1          | 1:C 11 May 2022 10:19:21.529 # Redis version=5.0.4, bits=64, commit=00000000, modified=0, pid=1, just started
+label_redis_1          | 1:C 11 May 2022 10:19:21.529 # Configuration loaded
+label_redis_1          | 1:M 11 May 2022 10:19:21.530 # Can't open the append-only file: Permission denied
