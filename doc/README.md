@@ -8,6 +8,8 @@ sudo docker-compose down
 
 sudo docker-compose logs -f
 
+ls /ymir-workplace
+
 sudo docker-compose -f docker-compose.labelfree.yml up -d
 sudo docker-compose -f docker-compose.label_studio.yml up -d
 

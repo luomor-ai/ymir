@@ -1,0 +1,2 @@
+ls /ymir-workplace/
+clickhouseDB  importing_pic  mysql  redis  sandbox  ymir-assets  ymir-data  ymir-models  ymir-storage  ymir-tensorboard-logs
