@@ -1,6 +1,9 @@
 ls /ymir-workplace/
 clickhouseDB  importing_pic  mysql  redis  sandbox  ymir-assets  ymir-data  ymir-models  ymir-storage  ymir-tensorboard-logs
 
+ls /ymir-workplace
+clickhouseDB  importing_pic  labelfree  mysql  redis  sandbox  ymir-assets  ymir-data  ymir-models  ymir-storage  ymir-tensorboard-logs
+
 label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
 label_minio_1          |       > Please provide correct credentials
 label_minio_1          |       HINT:
