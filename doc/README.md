@@ -22,6 +22,7 @@ sudo docker-compose -f docker-compose.labelfree.yml up label_redis
 sudo chmod 777 /ymir-workplace/labelfree/redis-persistence/
 
 sudo docker-compose -f docker-compose.labelfree.yml up label_minio
+MYSQL_ROOT_PASSWORD=root2022
 
 sudo docker-compose -f docker-compose.labelfree.yml logs -f
 
