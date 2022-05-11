@@ -13,6 +13,7 @@ admin@7otech.com
 test2022
 
 ls /ymir-workplace
+sudo rm -rf /ymir-workplace
 
 sudo docker-compose -f docker-compose.labelfree.yml up -d
 sudo docker-compose -f docker-compose.labelfree.yml down

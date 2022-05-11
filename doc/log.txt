@@ -1,2 +1,67 @@
 ls /ymir-workplace/
 clickhouseDB  importing_pic  mysql  redis  sandbox  ymir-assets  ymir-data  ymir-models  ymir-storage  ymir-tensorboard-logs
+
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+label_minio_1          | ERROR Unable to validate credentials inherited from the shell environment: Invalid credentials
+label_minio_1          |       > Please provide correct credentials
+label_minio_1          |       HINT:
+label_minio_1          |         Access key length should be at least 3, and secret key length at least 8 characters
+
+docker run -p 9000:9000 --name minio \
+-d --restart=always \
+-e "MINIO_ACCESS_KEY=minio" \
+-e "MINIO_SECRET_KEY=minio123456" \
+-v /home/data:/data \
+-v /home/config:/root/.minio \
+minio/minio server /data
