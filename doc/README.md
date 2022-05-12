@@ -65,6 +65,8 @@ test2022
 sudo docker-compose -f docker-compose.label_studio.yml up -d
 
 bash ymir.sh start
+
+docker rmi `docker images | grep none | awk '{print $3}'`
 ```
 
 ```
