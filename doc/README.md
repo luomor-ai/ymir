@@ -8,6 +8,10 @@ sudo docker-compose down
 
 sudo docker-compose logs -f
 
+sudo docker pull industryessentials/executor-example:latest
+sudo docker pull industryessentials/executor-det-yolov4-training:release-0.5.0
+sudo docker pull industryessentials/executor-det-yolov4-mining:release-0.5.0
+https://hub.docker.com/r/industryessentials/executor-example/tags
 http://49.232.6.131:8075/
 admin@7otech.com
 test2022
