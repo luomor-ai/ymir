@@ -28,6 +28,8 @@ sudo docker build \
     --build-arg NPM_REGISTRY="https://registry.npmmirror.com" \
     ./ymir/web
 
+sudo docker pull industryessentials/executor-example:latest
+
 cd docker
 
 mkdir ymir-workplace
