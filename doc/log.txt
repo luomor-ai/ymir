@@ -165,3 +165,74 @@ d83a4cfd2808   redis:5.0                              "docker-entrypoint.s…"  
                                                 harbor-log
 465a44683a6d   apache/incubator-doris:build-env-1.2   "/bin/bash"              9 months ago   Up 8 months
                                                 hungry_keldysh
+
+sudo docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                              NAMES
+061d2bb8ebde        bladex/sentinel-dashboard   "java -Djava.secur..."   9 months ago        Up 9 months         8719/tcp, 0.0.0.0:8858->8858/tcp   sentinel
+b2db8b95852f        nacos/nacos-server          "bin/docker-startu..."   9 months ago        Up 9 months         0.0.0.0:8848->8848/tcp             nacos
+
+docker pull industryessentials/executor-det-yolov4-training
+Using default tag: latest
+8412b44cad21: Pulling fs layer
+Trying to pull repository docker.io/industryessentials/executor-det-yolov4-training ...
+latest: Pulling from docker.io/industryessentials/executor-det-yolov4-training
+11323ed2c653: Downloading
+aac8cf1d1c79: Download complete
+fc85802d11de: Download complete
+5ecaf0dceab7: Download complete
+52ea4560e85a: Download complete
+de9ca64a95e6: Download complete
+e4165bf6e171: Download complete
+77cc6fb46c25: Download complete
+f54c7e16b308: Download complete
+4e21240e72c2: Download complete
+cf13d29321bf: Download complete
+dfb05a7d937c: Download complete
+789677c7aa9b: Download complete
+ee9f566b3322: Download complete
+8032c032533b: Download complete
+98f18e494c27: Download complete
+43962dc8a5c5: Download complete
+40c01027582e: Download complete
+bed4bb24b1bf: Download complete
+7650dd619eef: Download complete
+e8c1629610a9: Download complete
+42fed07ceabc: Downloading [================>                                  ]   362 MB/1.077 GB
+832db8365ca5: Download complete
+43bed2fc9820: Downloading [=========>                                         ] 47.88 MB/251.9 MB
+dc1d6e1c02f6: Download complete
+fcb84a9dc596: Download complete
+8412b44cad21: Download complete
+
+Using default tag: latest
+latest: Pulling from industryessentials/executor-det-yolov4-training
+11323ed2c653: Pull complete
+aac8cf1d1c79: Pull complete
+fc85802d11de: Pull complete
+5ecaf0dceab7: Pull complete
+52ea4560e85a: Pull complete
+de9ca64a95e6: Pull complete
+e4165bf6e171: Pull complete
+77cc6fb46c25: Pull complete
+f54c7e16b308: Pull complete
+4e21240e72c2: Pull complete
+cf13d29321bf: Pull complete
+dfb05a7d937c: Pull complete
+789677c7aa9b: Pull complete
+ee9f566b3322: Pull complete
+8032c032533b: Pull complete
+98f18e494c27: Pull complete
+43962dc8a5c5: Pull complete
+40c01027582e: Pull complete
+bed4bb24b1bf: Pull complete
+7650dd619eef: Pull complete
+e8c1629610a9: Pull complete
+42fed07ceabc: Pull complete
+832db8365ca5: Pull complete
+43bed2fc9820: Pull complete
+dc1d6e1c02f6: Pull complete
+fcb84a9dc596: Pull complete
+8412b44cad21: Pull complete
+Digest: sha256:639eeb86a9f9f5d8edb9b5905a357b99531bea68433b2791b8c7f035d24a72e6
+Status: Downloaded newer image for industryessentials/executor-det-yolov4-training:latest
+docker.io/industryessentials/executor-det-yolov4-training:latest
