@@ -1,16 +1,4 @@
 ```shell
-cd docker
-
-mkdir ymir-workplace
-
-sudo docker-compose up -d
-sudo docker-compose down
-
-sudo docker-compose logs -f
-
-sudo docker exec -it docker_web_1 sh
-sudo docker exec -it docker_backend_1 bash
-
 industryessentials/ymir-web
 industryessentials/ymir-backend
 industryessentials/executor-example
@@ -30,6 +18,19 @@ sudo docker tag industryessentials/executor-det-yolov4-training:release-0.5.0 re
 sudo docker push registry.cn-beijing.aliyuncs.com/luomor/executor-det-yolov4-training:release-0.5.0
 
 https://hub.docker.com/r/industryessentials/executor-example/tags
+
+cd docker
+
+mkdir ymir-workplace
+
+sudo docker-compose up -d
+sudo docker-compose down
+
+sudo docker-compose logs -f
+
+sudo docker exec -it docker_web_1 sh
+sudo docker exec -it docker_backend_1 bash
+
 http://49.232.6.131:8075/
 admin@7otech.com
 test2022
