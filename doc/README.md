@@ -16,6 +16,8 @@ industryessentials/executor-det-yolov4-mining
 industryessentials/ymir-backend-redis
 industryessentials/ymir-viz-redis
 
+https://github.com/AlexeyAB/darknet
+
 sudo docker pull industryessentials/executor-example:latest
 sudo docker pull industryessentials/executor-det-yolov4-training:release-0.5.0
 sudo docker pull industryessentials/executor-det-yolov4-mining:release-0.5.0
