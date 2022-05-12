@@ -8,6 +8,14 @@ sudo docker-compose down
 
 sudo docker-compose logs -f
 
+industryessentials/ymir-web
+industryessentials/ymir-backend
+industryessentials/executor-example
+industryessentials/executor-det-yolov4-training
+industryessentials/executor-det-yolov4-mining
+industryessentials/ymir-backend-redis
+industryessentials/ymir-viz-redis
+
 sudo docker pull industryessentials/executor-example:latest
 sudo docker pull industryessentials/executor-det-yolov4-training:release-0.5.0
 sudo docker pull industryessentials/executor-det-yolov4-mining:release-0.5.0
