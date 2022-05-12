@@ -137,3 +137,31 @@ pwd
 /app
 ls
 common  supervisor  supervisor.sock  supervisord.pid  ymir_app  ymir_controller  ymir_monitor  ymir_postman  ymir_viz
+
+sudo docker ps
+CONTAINER ID   IMAGE                                  COMMAND                  CREATED        STATUS                  PORTS
+                                                NAMES
+8ac457312931   jeecg-boot-system                      "/bin/sh -c 'sleep 6…"   2 months ago   Up 2 months             0.0.0.0:8080->8080/tcp, :::8080->8080/tcp                                              jeecg-boot-system
+f9dfacbe15f4   jeecg-boot-mysql                       "docker-entrypoint.s…"   2 months ago   Up 2 months             33060/tcp, 0.0.0.0:3307->3306/tcp, :::3307->3306/tcp                                   jeecg-boot-mysql
+d83a4cfd2808   redis:5.0                              "docker-entrypoint.s…"   2 months ago   Up 2 months             0.0.0.0:6369->6379/tcp, :::6369->6379/tcp                                              jeecg-boot-redis
+4e28a297b3f2   singularities/hadoop                   "start-hadoop nameno…"   7 months ago   Up 7 months                                                                                                    hdfs_namenode_1
+4f81ff62ea15   doris-camtg_doris-be                   "/home/doris/entrypo…"   7 months ago   Up 3 months                                                                                                    doris-be
+0258268a75a8   doris-camtg_doris-fe                   "/home/doris/entrypo…"   7 months ago   Up 7 months                                                                                                    doris-fe
+80485c5e0ff7   mongo                                  "docker-entrypoint.s…"   7 months ago   Up 7 months             0.0.0.0:27017->27017/tcp, :::27017->27017/tcp                                          mongo
+88539a41ed0d   goharbor/harbor-jobservice:v2.3.1      "/harbor/entrypoint.…"   9 months ago   Up 9 months (healthy)                                                                                          harbor-jobservice
+986adc55914f   goharbor/nginx-photon:v2.3.1           "nginx -g 'daemon of…"   9 months ago   Up 9 months (healthy)   0.0.0.0:8001->8080/tcp, :::8001->8080/tcp, 0.0.0.0:8002->8443/tcp, :::8002->8443/tcp   nginx
+83db34b2d35c   goharbor/harbor-core:v2.3.1            "/harbor/entrypoint.…"   9 months ago   Up 9 months (healthy)                                                                                          harbor-core
+05e43967a3de   goharbor/redis-photon:v2.3.1           "redis-server /etc/r…"   9 months ago   Up 9 months (healthy)
+                                                redis
+72f0ea957634   goharbor/harbor-registryctl:v2.3.1     "/home/harbor/start.…"   9 months ago   Up 9 months (healthy)
+                                                registryctl
+7b2a8c67bef2   goharbor/harbor-db:v2.3.1              "/docker-entrypoint.…"   9 months ago   Up 9 months (healthy)
+                                                harbor-db
+5cb6ed9bdae1   goharbor/registry-photon:v2.3.1        "/home/harbor/entryp…"   9 months ago   Up 9 months (healthy)
+                                                registry
+7c31827e300f   goharbor/harbor-portal:v2.3.1          "nginx -g 'daemon of…"   9 months ago   Up 9 months (healthy)
+                                                harbor-portal
+9dcb1b37ad56   goharbor/harbor-log:v2.3.1             "/bin/sh -c /usr/loc…"   9 months ago   Up 9 months (healthy)   127.0.0.1:1514->10514/tcp
+                                                harbor-log
+465a44683a6d   apache/incubator-doris:build-env-1.2   "/bin/bash"              9 months ago   Up 8 months
+                                                hungry_keldysh
