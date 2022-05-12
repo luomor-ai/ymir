@@ -132,3 +132,8 @@ root          33      17  0 May11 ?        00:00:06 /usr/bin/python3 /usr/local/
 root          64       8  0 May11 ?        00:00:45 /usr/bin/python3 /usr/local/bin/gunicorn -w 1 -k uvicorn.workers.UvicornWorker -c app/gunicorn_conf.py ap
 root         858       0  0 03:35 pts/0    00:00:00 sh
 root         864     858  0 03:35 pts/0    00:00:00 ps -ef
+
+pwd
+/app
+ls
+common  supervisor  supervisor.sock  supervisord.pid  ymir_app  ymir_controller  ymir_monitor  ymir_postman  ymir_viz
