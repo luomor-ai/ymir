@@ -246,3 +246,5 @@ industryessentials/executor-det-yolov4-training                        release-0
 industryessentials/executor-det-yolov4-mining                          release-0.5.0                   33d61932b98f   3 weeks ago     4.14GB
 industryessentials/ymir-viz-redis                                      latest                          ad31d570c5b2   7 months ago    105MB
 industryessentials/ymir-backend-redis                                  latest                          c2bfba45d55c   7 months ago    149MB
+
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat ~/git/ymir/Dockerfile.backend: no such file or directory

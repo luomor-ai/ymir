@@ -22,12 +22,12 @@ https://hub.docker.com/r/industryessentials/executor-example/tags
 sudo docker build \
     -t industryessentials/ymir-backend \
     --build-arg PIP_SOURCE="https://pypi.mirrors.ustc.edu.cn/simple" \
-    ./ymir -f Dockerfile.backend 
+    ./ymir -f ./ymir/Dockerfile.backend 
 sudo docker build \
     -t industryessentials/ymir-web \
     --build-arg NPM_REGISTRY="https://registry.npmmirror.com" \
     ./ymir/web
-        
+
 cd docker
 
 mkdir ymir-workplace
