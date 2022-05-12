@@ -24,7 +24,6 @@ https://github.com/AlexeyAB/darknet
 sudo docker pull industryessentials/executor-example:latest
 sudo docker pull industryessentials/executor-det-yolov4-training:release-0.5.0
 sudo docker pull industryessentials/executor-det-yolov4-training
-sudo docker pull hub.c.163.com/industryessentials/executor-det-yolov4-training
 sudo docker pull industryessentials/executor-det-yolov4-mining:release-0.5.0
 https://hub.docker.com/r/industryessentials/executor-example/tags
 http://49.232.6.131:8075/
