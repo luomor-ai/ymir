@@ -7,4 +7,7 @@ sudo docker push registry.cn-beijing.aliyuncs.com/luomor/industryessentials-ymir
 
 sudo docker tag industryessentials/ymir-backend registry.cn-beijing.aliyuncs.com/luomor/industryessentials-ymir-backend
 sudo docker push registry.cn-beijing.aliyuncs.com/luomor/industryessentials-ymir-backend
+
+sudo docker tag industryessentials/executor-example registry.cn-beijing.aliyuncs.com/luomor/industryessentials-executor-example 
+sudo docker push registry.cn-beijing.aliyuncs.com/luomor/industryessentials-executor-example 
 ```
