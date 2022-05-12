@@ -74,3 +74,61 @@ label_redis_1          | 1:C 11 May 2022 10:19:21.529 # oO0OoO0OoO0Oo Redis is s
 label_redis_1          | 1:C 11 May 2022 10:19:21.529 # Redis version=5.0.4, bits=64, commit=00000000, modified=0, pid=1, just started
 label_redis_1          | 1:C 11 May 2022 10:19:21.529 # Configuration loaded
 label_redis_1          | 1:M 11 May 2022 10:19:21.530 # Can't open the append-only file: Permission denied
+
+ps -ef
+PID   USER     TIME  COMMAND
+    1 root      0:00 nginx: master process nginx -g daemon off;
+    8 nginx     0:00 nginx: worker process
+    9 nginx     0:00 nginx: worker process
+   10 nginx     0:00 nginx: worker process
+   11 nginx     0:00 nginx: worker process
+   12 nginx     0:00 nginx: worker process
+   13 nginx     0:00 nginx: worker process
+   14 nginx     0:00 nginx: worker process
+   15 nginx     0:00 nginx: worker process
+   16 nginx     0:00 nginx: worker process
+   17 nginx     0:00 nginx: worker process
+   18 nginx     0:00 nginx: worker process
+   19 nginx     0:00 nginx: worker process
+   20 nginx     0:00 nginx: worker process
+   21 nginx     0:00 nginx: worker process
+   22 nginx     0:00 nginx: worker process
+   23 nginx     0:00 nginx: worker process
+   24 nginx     0:00 nginx: worker process
+   25 nginx     0:00 nginx: worker process
+   26 nginx     0:00 nginx: worker process
+   27 nginx     0:00 nginx: worker process
+   28 nginx     0:00 nginx: worker process
+   29 nginx     0:00 nginx: worker process
+   30 nginx     0:00 nginx: worker process
+   31 nginx     0:00 nginx: worker process
+   32 nginx     0:00 nginx: worker process
+   33 nginx     0:00 nginx: worker process
+   34 nginx     0:00 nginx: worker process
+   35 nginx     0:00 nginx: worker process
+   36 nginx     0:00 nginx: worker process
+   37 nginx     0:00 nginx: worker process
+   38 nginx     0:00 nginx: worker process
+   39 nginx     0:00 nginx: worker process
+   46 root      0:00 sh
+   52 root      0:00 ps -ef
+
+ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 May11 ?        00:00:10 /usr/bin/python3 /usr/local/bin/supervisord -nc supervisor/supervisord.conf
+root           8       1  0 May11 ?        00:00:04 /usr/bin/python3 /usr/local/bin/gunicorn -w 1 -k uvicorn.workers.UvicornWorker -c app/gunicorn_conf.py ap
+root           9       1  0 May11 ?        00:00:45 python ymir_controller/controller/server.py -d -f ymir_controller/controller/server_prd_config.yaml
+root          10       1  0 May11 ?        00:00:01 python -u ymir_controller/controller/label_project_monitor.py
+root          11       1  0 May11 ?        00:00:04 python ymir_monitor/monitor/utils/crontab_job.py
+root          14       1  0 May11 ?        00:00:04 /usr/bin/python3 /usr/local/bin/gunicorn -w 1 -b 0.0.0.0:9098 -k uvicorn.workers.UvicornWorker monitor.ma
+root          15       1  0 May11 ?        00:00:00 python pm_server.py
+root          16       1  0 May11 ?        00:00:37 /usr/bin/python3 /usr/local/bin/uvicorn pm_app_server:app --port 8090 --host 0.0.0.0 --log-config uvicorn
+root          17       1  0 May11 ?        00:00:05 /usr/bin/python3 /usr/local/bin/gunicorn -k gevent -c gunicorn_conf.py wsgi:connexion_app
+root          25      17  0 May11 ?        00:00:07 /usr/bin/python3 /usr/local/bin/gunicorn -k gevent -c gunicorn_conf.py wsgi:connexion_app
+root          27      14  0 May11 ?        00:00:38 /usr/bin/python3 /usr/local/bin/gunicorn -w 1 -b 0.0.0.0:9098 -k uvicorn.workers.UvicornWorker monitor.ma
+root          28      17  0 May11 ?        00:00:06 /usr/bin/python3 /usr/local/bin/gunicorn -k gevent -c gunicorn_conf.py wsgi:connexion_app
+root          31      17  0 May11 ?        00:00:07 /usr/bin/python3 /usr/local/bin/gunicorn -k gevent -c gunicorn_conf.py wsgi:connexion_app
+root          33      17  0 May11 ?        00:00:06 /usr/bin/python3 /usr/local/bin/gunicorn -k gevent -c gunicorn_conf.py wsgi:connexion_app
+root          64       8  0 May11 ?        00:00:45 /usr/bin/python3 /usr/local/bin/gunicorn -w 1 -k uvicorn.workers.UvicornWorker -c app/gunicorn_conf.py ap
+root         858       0  0 03:35 pts/0    00:00:00 sh
+root         864     858  0 03:35 pts/0    00:00:00 ps -ef

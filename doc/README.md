@@ -8,6 +8,9 @@ sudo docker-compose down
 
 sudo docker-compose logs -f
 
+sudo docker exec -it docker_web_1 sh
+sudo docker exec -it docker_backend_1 bash
+
 industryessentials/ymir-web
 industryessentials/ymir-backend
 industryessentials/executor-example
