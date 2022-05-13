@@ -248,3 +248,35 @@ industryessentials/ymir-viz-redis                                      latest   
 industryessentials/ymir-backend-redis                                  latest                          c2bfba45d55c   7 months ago    149MB
 
 unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat ~/git/ymir/Dockerfile.backend: no such file or directory
+
+mir
+usage: mir [-h] [-v] [-d] COMMAND ...
+
+MIR
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --version  show program's version
+  -d, --debug    set debug mode, print more infos.
+
+sub commands:
+  COMMAND        Use mir COMMAND --help for sub command help
+    init         init mir repo
+    branch       show mir repo branches
+    checkout (co)
+                 checkout commits or add new branches
+    commit       commit changes
+    copy         copy datas from another repo
+    export       export data
+    filter       filter assets
+    log          show mir repo log
+    merge        merge contents from other branch
+    reset        undo changes to repo
+    sampling     sample assets
+    show         show current workspace informations
+    status       show current workspace status
+    train        train current workspace
+    mining       mine current workspace
+    import       import raw data
+    infer        inference images
+    models       import model

@@ -41,6 +41,7 @@ sudo docker-compose logs -f
 
 sudo docker exec -it docker_web_1 sh
 sudo docker exec -it docker_backend_1 bash
+mir
 
 http://49.232.6.131:8075/
 admin@7otech.com
