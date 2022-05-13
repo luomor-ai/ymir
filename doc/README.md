@@ -42,6 +42,23 @@ sudo docker-compose logs -f
 sudo docker exec -it docker_web_1 sh
 sudo docker exec -it docker_backend_1 bash
 mir
+cd /app
+find /data/sharing/import_dataset_t882unbu/images -type f > index.tsv
+mkdir ~/mir-demo-repo && cd ~/mir-demo-repo
+mir init
+mkdir ~/ymir-assets ~/ymir-models
+vim labels.csv
+0,,cat
+1,,bowl
+2,,spoon
+3,,bottle
+4,,cup
+mir checkout master
+mir import --index-file /app/index.tsv \
+             --annotation-dir /data/sharing/import_dataset_t882unbu/annotations \
+             --gen-dir ~/ymir-assets \
+             --dataset-name 'dataset-training' \
+             --dst-rev 'dataset-training@import'
 
 http://49.232.6.131:8075/
 admin@7otech.com
