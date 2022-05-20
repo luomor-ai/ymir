@@ -48,19 +48,16 @@ sudo docker exec -it docker_web_1 sh
 sudo docker exec -it docker_backend_1 bash
 mir
 cd /app
-find /data/sharing/import_dataset_t882unbu/images -type f > index.tsv
+find /data/sharing/import_dataset_a02fozaa/images -type f > index.tsv
 mkdir ~/mir-demo-repo && cd ~/mir-demo-repo
 mir init
 mkdir ~/ymir-assets ~/ymir-models
 vim labels.csv
-0,,cat
-1,,bowl
-2,,spoon
-3,,bottle
-4,,cup
+type_id, preserved, main type name, alias
+0,,fire
 mir checkout master
 mir import --index-file /app/index.tsv \
-             --annotation-dir /data/sharing/import_dataset_t882unbu/annotations \
+             --annotation-dir /data/sharing/import_dataset_a02fozaa/annotations \
              --gen-dir ~/ymir-assets \
              --dataset-name 'dataset-training' \
              --dst-rev 'dataset-training@import'
