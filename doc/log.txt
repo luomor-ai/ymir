@@ -363,3 +363,49 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 157, in wrapper
     raise exc
 mir.tools.errors.MirRuntimeError: code: 160001, message: invalid config file: /root/training-config.yaml, needs: executor_config
+
+mir train -w /tmp/ymir/training/train-0 \
+>           --media-location ~/ymir-assets \
+>           --model-location ~/ymir-models \
+>           --task-config-file ~/training-config.yaml \
+>           --src-revs dataset-training@filtered \
+>           --dst-rev training-0@trained \
+>           --executor industryessentials/executor-det-yolov4-training:release-1.1.0 # 训练镜像
+git result:
+ M tasks.mir
+
+[training-0 76581e9] task failed
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+|-_commit_error costs 0.03s(0.00m).
+command failed: training-0@trained; exc: (['git', 'rev-parse', 'dataset-training@filtered:metadatas.mir'], 128, b"fatal: Invalid object name 'dataset-training@filtered'.", b'dataset-training@filtered:metadatas.mir')
+trace: cmd exception: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 95, in wrapper
+    ret = f(mir_root=mir_root, src_revs=src_revs, dst_rev=dst_rev, work_dir=work_dir, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/training.py", line 237, in run_with_args
+    mir_metadatas: mirpb.MirMetadatas = mir_storage_ops.MirStorageOps.load_single_storage(
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/mir_storage_ops.py", line 220, in load_single_storage
+    mir_storage_data.ParseFromString(exodus.read_mir(mir_root=mir_root, rev=rev,
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/exodus.py", line 18, in read_mir
+    blob_hash = scm_git.rev_parse(f"{rev}:{file_name}")
+  File "/usr/local/lib/python3.8/dist-packages/mir/scm/cmd.py", line 135, in <lambda>
+    return lambda *args, **kwargs: self._call_process(name, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/mir/scm/cmd.py", line 439, in _call_process
+    return self.execute(call, **exec_kwargs)  # type: ignore
+  File "/usr/local/lib/python3.8/dist-packages/mir/scm/cmd.py", line 345, in execute
+    raise ValueError(command, status, stderr_value, stdout_value)
+ValueError: (['git', 'rev-parse', 'dataset-training@filtered:metadatas.mir'], 128, b"fatal: Invalid object name 'dataset-training@filtered'.", b'dataset-training@filtered:metadatas.mir')
+
+Traceback (most recent call last):
+  File "/usr/local/bin/mir", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/dist-packages/mir/main.py", line 19, in main
+    return cmd.cmd_run()
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/utils.py", line 27, in wrapper
+    _ret = f(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/base.py", line 17, in cmd_run
+    return self.run()
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/training.py", line 152, in run
+    return CmdTrain.run_with_args(work_dir=self.args.work_dir,
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 157, in wrapper
+    raise exc
+ValueError: (['git', 'rev-parse', 'dataset-training@filtered:metadatas.mir'], 128, b"fatal: Invalid object name 'dataset-training@filtered'.", b'dataset-training@filtered:metadatas.mir')
