@@ -91,6 +91,8 @@ admin@7otech.com
 test2022
 
 安防
+fire
+smoke
 
 https://www.iconfont.cn/
 https://heroicons.dev/
