@@ -280,3 +280,23 @@ sub commands:
     import       import raw data
     infer        inference images
     models       import model
+
+Pulling label_nginx         ... done
+Pulling label_api           ... done
+Pulling label_celery_worker ... done
+Pulling label_mysql         ... done
+Pulling label_redis         ... done
+Pulling label_minio         ... done
+
+label_nginx
+label_api
+label_celery_worker
+label_minio
+
+Pulling redis       ...
+Pulling viz-redis   ...
+Pulling db          ... done
+Pulling tensorboard ... done
+Pulling clickhouse  ... done
+Pulling backend     ...
+Pulling web         ...
