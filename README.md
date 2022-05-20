@@ -1,8 +1,67 @@
+<div align="center">
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/YMIR.jpg" width="500"/>
+  <div>&nbsp;</div>
+  <div align="center">
+    <b><font size="5">Official Site</font></b>
+    <sup>
+      <a href="https://www.viesc.com/">
+        <i><font size="4">VISIT</font></i>
+      </a>
+    </sup>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <b><font size="5">Apply for Trial</font></b>
+    <sup>
+      <a href="https://github.com/IndustryEssentials/ymir#12-apply-for-trial">
+        <i><font size="4">TRY IT OUT</font></i>
+      </a>
+    </sup>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <b><font size="5">SLACK Community</font></b>
+    <sup>
+      <a href="https://join.slack.com/t/ymir-users/shared_invite/zt-ywephyib-ccghwp8vrd58d3u6zwtG3Q">
+        <i><font size="4">WELCOME</font></i>
+      </a>
+    </sup>
+  </div>
+  <div>&nbsp;</div>
+<div align="center">
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/for_management.png" width="180"/>
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/for_mining.png" width="200"/>
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/for_labeling.png" width="200"/>
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/for_training.png" width="200"/>
+  <div>&nbsp;</div>
+  
+[📘Usage Instruction](https://github.com/IndustryEssentials/ymir/blob/master/README_zh-CN.md#3-gui%E4%BD%BF%E7%94%A8-%E5%85%B8%E5%9E%8B%E6%A8%A1%E5%9E%8B%E7%94%9F%E4%BA%A7%E6%B5%81%E7%A8%8B) |
+[🛠️Installation](https://github.com/IndustryEssentials/ymir/blob/master/README_zh-CN.md#2-%E5%AE%89%E8%A3%85) |
+[👀Equipment](https://c1n.cn/obvHf) |
+[🚀Projects](https://github.com/IndustryEssentials/ymir/projects) | 
+[🤔Issues Report](https://github.com/IndustryEssentials/ymir/issues/new/choose) | 
+[📰Lisence](https://github.com/IndustryEssentials/ymir/blob/master/LICENSE)
+  
+</div>&nbsp;</div>
+  
+<div align="center">
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/wechat_code.jpg" width="180"/>
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/contact.jpg" width="400"/>
+  
+  📫 Feedback on usage issues: contact.viesc@gmail.com / Professional consulting for server equipment: tensor.station@gmail.com
+<div>&nbsp;</div>&nbsp;</div>
+
+# Citations
+
+If you wish to refer to YMIR in your work, please use the following BibTeX entry.
+```bibtex
+@inproceedings{huang2021ymir,
+      title={YMIR: A Rapid Data-centric Development Platform for Vision Applications}, 
+      author={Phoenix X. Huang and Wenze Hu and William Brendel and Manmohan Chandraker and Li-Jia Li and Xiaoyu Wang},
+      booktitle={Proceedings of the Data-Centric AI Workshop at NeurIPS},
+      year={2021},
+}
+```
+
 ## Introduction
 
-English | [Simplified Chinese](README_zh-CN.md)
-
-![YMIR](https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/YMIR.jpeg)
+English | [简体中文](README_zh-CN.md)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -50,30 +109,16 @@ English | [Simplified Chinese](README_zh-CN.md)
     - [6.1.2. Branch and dataset management](#612-branch-and-dataset-management)
 - [7. MISC](#7-misc)
   - [7.1. FAQ](#71-faq)
-  - [7.2. License](#72-license)
-  - [7.3. Contact us](#73-contact-us)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Citations
-
-If you wish to refer to YMIR in your work, please use the following BibTeX entry.
-```bibtex
-@inproceedings{huang2021ymir,
-      title={YMIR: A Rapid Data-centric Development Platform for Vision Applications}, 
-      author={Phoenix X. Huang and Wenze Hu and William Brendel and Manmohan Chandraker and Li-Jia Li and Xiaoyu Wang},
-      booktitle={Proceedings of the Data-Centric AI Workshop at NeurIPS},
-      year={2021},
-}
-```
-
-Welcome to enter our WeChat communication group~
-
-![YMIR](https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/wechat_code.jpg)
 
 # 1. Introduction to AI SUITE-YMIR
 
 As a streamlined model development product, YMIR(You Mine In Recursion) focuses on the dataset versioning and model iteration in the AI SUITE open-source series.
+
+<div align="center">
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/processing.png" width="800"/>
+  <div>&nbsp;</div>&nbsp;</div>
 
 AI commercialization is currently reaching a stage of maturity in terms of computing hardwares,  algorithms, etc. The adoption of AI often encounter challenges such as a lack of skilled developers, high development costs and long iteration cycles.
 
@@ -124,8 +169,6 @@ YMIR platform mainly meets the needs of users to produce models at scale, provid
 We provide an online trial version for your convenience. If you need, please fill out the [Apply for YMIR Trial](https://alfrat.wufoo.com/forms/mkxsic906al0pf/) , and we will send the trial information to your email address.
 
 # 2. Installation
-
-![processing](https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/processing.png)
 
 How do users choose to install GUI or CMD?
 
@@ -182,6 +225,11 @@ LABEL_TOOL_HOST_PORT=set_your_label_tool_HOST_PORT
 Execute the start command after the modification: `bash ymir.sh start`.
 
 4. After the service successfully started, YMIR will be available at [http://localhost:12001/](http://localhost:12001/). If you need to **stop the service**, run the command: `bash ymir.sh stop`
+
+5. The default initial user is super administrator, you can check account and password through the .env file under the project path and modify it before deployment. It is recommended to change the password through the user management interface after the service deployment is completed.
+<div align="left">
+  <img src="https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/first_admin.png" width="600"/>
+  <div>&nbsp;</div>
 
 ## 2.3. Installation of **Label Studio** (optional)
 
@@ -294,9 +342,9 @@ Users can download the example **Sample.zip** for reference as follows:
 
 1. Download the open-source dataset VOC2012 ([Click to download VOC2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)) and unzip it. Change the folder name as required, and then compressing them separately into zip packages that meet the import requirements.
 
-2. Place dataset VOC2012 under ymir-workplace/importing_pic.
+2. Place dataset VOC2012 under `ymir-workplace/ymir-sharing`.
 
-3. Select 'path import' and enter the absolute path address of the dataset in the server: /data/sharing/voc2012, as shown in the figure below:
+3. Select 'path import' and enter the absolute path of the dataset in the server: `/ymir-sharing/voc2012`, as shown in the figure below:
 
 ![path import](https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/path%20import.jpg)
 
@@ -388,7 +436,7 @@ After training the model, users can validate the model. On the [Model Management
 
 Select the validation mirror, adjust the parameters, click the [Upload Image] button, select the local image to upload, click [Model Validation], and display the results as follows.
 
-![model val2](https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/model%20ver2.jpg)
+![model val2](https://github.com/IndustryEssentials/ymir-images/blob/main/doc_images/model_ver2.jpg)
 
 ## 3.2.9. Model download
 
@@ -869,17 +917,6 @@ After successful training, the system will output the ID of the model. The user 
 **How to solve the deployment, debugging and operation problems encountered in windows system?**
 
 It has not been fully tested on Windows server, so we cannot provide service support for the time being.
-
-## 7.2. License
-
-YMIR is licensed under version 2.0 of the Apache License. See the [LICENSE](https://github.com/IndustryEssentials/ymir/blob/master/LICENSE) file for details.
-
-## 7.3. Contact us
-
-Contact us with further questions: contact.viesc@gmail.com
-
-Join our [Slack community](https://join.slack.com/t/ymir-users/shared_invite/zt-ywephyib-ccghwp8vrd58d3u6zwtG3Q) to chat to our engineers about your use cases, questions, and support queries.
-
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/All%20Contributors-8-brightgreen)](#contributors-)
