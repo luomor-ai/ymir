@@ -77,6 +77,7 @@ mir import --index-file /app/val-index.tsv \
              --dst-rev 'dataset-val@import'
 
 vim ~/training-config.yaml
+git tag -d training-0@trained
 mir train -w /tmp/ymir/training/train-0 \
           --media-location ~/ymir-assets \
           --model-location ~/ymir-models \

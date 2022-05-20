@@ -327,3 +327,39 @@ shm_size:
 16G
 gpu_count:
 0
+
+mir train -w /tmp/ymir/training/train-0 \
+>           --media-location ~/ymir-assets \
+>           --model-location ~/ymir-models \
+>           --task-config-file ~/training-config.yaml \
+>           --src-revs dataset-training@filtered \
+>           --dst-rev training-0@trained \
+>           --executor industryessentials/executor-det-yolov4-training:release-1.1.0 # 训练镜像
+git result:
+ M tasks.mir
+
+[training-0 6d4c5f7] task failed
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+|-_commit_error costs 0.03s(0.00m).
+command failed: training-0@trained; exc: code: 160001, message: invalid config file: /root/training-config.yaml, needs: executor_config
+trace: cmd exception: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 95, in wrapper
+    ret = f(mir_root=mir_root, src_revs=src_revs, dst_rev=dst_rev, work_dir=work_dir, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/training.py", line 207, in run_with_args
+    raise MirRuntimeError(
+mir.tools.errors.MirRuntimeError: code: 160001, message: invalid config file: /root/training-config.yaml, needs: executor_config
+
+Traceback (most recent call last):
+  File "/usr/local/bin/mir", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.8/dist-packages/mir/main.py", line 19, in main
+    return cmd.cmd_run()
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/utils.py", line 27, in wrapper
+    _ret = f(*args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/base.py", line 17, in cmd_run
+    return self.run()
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/training.py", line 152, in run
+    return CmdTrain.run_with_args(work_dir=self.args.work_dir,
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 157, in wrapper
+    raise exc
+mir.tools.errors.MirRuntimeError: code: 160001, message: invalid config file: /root/training-config.yaml, needs: executor_config
