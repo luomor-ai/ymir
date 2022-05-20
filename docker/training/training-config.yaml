@@ -9,5 +9,6 @@ subdivisions: 32
 shm_size: '4G'
 class_names:
  - fire
+gpu_count: 0
 # gpu_id: '0,1,2,3'
 # pretrained_model_params: []
