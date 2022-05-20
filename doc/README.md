@@ -14,6 +14,10 @@ sudo docker pull industryessentials/executor-det-yolov4-training:release-0.5.0
 sudo docker pull industryessentials/executor-det-yolov4-training
 sudo docker pull industryessentials/executor-det-yolov4-mining:release-0.5.0
 
+sudo docker pull industryessentials/executor-det-yolov4-mining:release-1.1.0
+sudo docker pull industryessentials/executor-det-yolov4-mining:release-1.1.0
+sudo docker images|grep industryessentials
+
 sudo docker tag industryessentials/executor-det-yolov4-training:release-0.5.0 registry.cn-beijing.aliyuncs.com/luomor/executor-det-yolov4-training:release-0.5.0
 sudo docker push registry.cn-beijing.aliyuncs.com/luomor/executor-det-yolov4-training:release-0.5.0
 
