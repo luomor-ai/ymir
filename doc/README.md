@@ -34,6 +34,7 @@ cd docker
 
 mkdir ymir-workplace
 
+sudo docker-compose pull
 sudo docker-compose up -d
 sudo docker-compose down
 
@@ -67,6 +68,7 @@ test2022
 ls /ymir-workplace
 sudo rm -rf /ymir-workplace
 
+sudo docker-compose -f docker-compose.labelfree.yml pull
 sudo docker-compose -f docker-compose.labelfree.yml up -d
 sudo docker-compose -f docker-compose.labelfree.yml down
 
