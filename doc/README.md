@@ -82,9 +82,11 @@ sudo docker-compose -f docker-compose.labelfree.yml logs -f
 
 sudo docker exec -it docker_label_nginx_1 sh
 sudo docker cp docker_label_nginx_1:/usr/share/nginx/html label-web
+cd label-web && git pull && cd ..
 sudo docker cp label-web/static/js/index.8ef315f2.js docker_label_nginx_1:/usr/share/nginx/html/static/js/index.8ef315f2.js
 
 http://49.232.6.131:8763/
+https://label.7otech.com/
 admin@7otech.com
 test2022
 
