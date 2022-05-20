@@ -70,6 +70,7 @@ sudo rm -rf /ymir-workplace
 
 sudo docker-compose -f docker-compose.labelfree.yml pull
 sudo docker-compose -f docker-compose.labelfree.yml up -d
+sudo docker-compose -f docker-compose.labelfree.yml down
 sudo chmod 777 /ymir-workplace/labelfree/redis-persistence/
 sudo docker-compose -f docker-compose.labelfree.yml up -d
 sudo docker-compose -f docker-compose.labelfree.yml down
