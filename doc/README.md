@@ -76,6 +76,7 @@ mir import --index-file /app/val-index.tsv \
              --dataset-name 'dataset-val' \
              --dst-rev 'dataset-val@import'
 
+vim ~/training-config.yaml
 mir train -w /tmp/ymir/training/train-0 \
           --media-location ~/ymir-assets \
           --model-location ~/ymir-models \
