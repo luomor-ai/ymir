@@ -80,6 +80,8 @@ MYSQL_ROOT_PASSWORD=root2022
 
 sudo docker-compose -f docker-compose.labelfree.yml logs -f
 
+sudo docker exec -it docker_label_nginx_1 sh
+
 http://49.232.6.131:8763/
 admin@7otech.com
 test2022
