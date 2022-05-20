@@ -49,19 +49,33 @@ sudo docker exec -it docker_backend_1 bash
 mir
 cd /app
 find /data/sharing/import_dataset_a02fozaa/images -type f > index.tsv
+find /data/sharing/import_dataset_aj2xzs0c/images -type f > val-index.tsv
 mkdir ~/mir-demo-repo && cd ~/mir-demo-repo
 mir init
 mkdir ~/ymir-assets ~/ymir-models
-vim labels.csv
-type_id, preserved, main type name, alias
-0,,fire
+# vim labels.csv
+# type_id, preserved, main type name, alias
+# 0,,fire
+vim .mir/labels.yaml
+labels:
+- aliases: []
+  create_time: &id001 2022-05-20 10:41:24.185227
+  id: 0
+  name: fire
+  update_time: *id001
+version: 1
 mir checkout master
 mir import --index-file /app/index.tsv \
              --annotation-dir /data/sharing/import_dataset_a02fozaa/annotations \
              --gen-dir ~/ymir-assets \
              --dataset-name 'dataset-training' \
              --dst-rev 'dataset-training@import'
-
+mir import --index-file /app/val-index.tsv \
+             --annotation-dir /data/sharing/import_dataset_aj2xzs0c/annotations \
+             --gen-dir ~/ymir-assets \
+             --dataset-name 'dataset-val' \
+             --dst-rev 'dataset-val@import'
+             
 http://49.232.6.131:8075/
 admin@7otech.com
 test2022

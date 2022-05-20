@@ -300,3 +300,9 @@ Pulling tensorboard ... done
 Pulling clickhouse  ... done
 Pulling backend     ...
 Pulling web         ...
+
+find / -name "labels.yaml"
+/root/mir-demo-repo/.mir/labels.yaml
+/ymir-workplace/sandbox/0001/000002/.mir/labels.yaml
+/ymir-workplace/sandbox/0001/labels.yaml
+/ymir-workplace/sandbox/0001/000001/.mir/labels.yaml
