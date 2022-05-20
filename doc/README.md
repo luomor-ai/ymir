@@ -88,6 +88,11 @@ http://49.232.6.131:8763/
 admin@7otech.com
 test2022
 
+https://www.iconfont.cn/
+https://heroicons.dev/
+https://www.zondicons.com/
+https://www.flaticon.com/
+
 sudo docker-compose -f docker-compose.label_studio.yml up -d
 
 bash ymir.sh start
