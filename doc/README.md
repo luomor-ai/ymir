@@ -120,6 +120,8 @@ https://label.7otech.com/
 admin@7otech.com
 test2022
 
+http://49.232.6.131:9099/
+
 安防
 fire
 smoke
