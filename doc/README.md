@@ -155,6 +155,7 @@ sudo yum clean expire-cache
 sudo yum install -y nvidia-docker2
 sudo systemctl restart docker
 
+lsattr /usr
 sudo chattr -i /usr/bin
 sudo yum install nvidia-docker2
 sudo yum install -y nvidia-docker2
