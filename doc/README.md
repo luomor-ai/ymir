@@ -154,6 +154,8 @@ yum-config-manager --enable libnvidia-container-experimental
 sudo yum clean expire-cache
 sudo yum install -y nvidia-docker2
 sudo systemctl restart docker
+
+sudo yum install -y nvidia-docker2
 ```
 
 ```
