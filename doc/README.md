@@ -43,6 +43,7 @@ sudo docker-compose up -d
 sudo docker-compose down
 
 sudo docker-compose logs -f
+tail -f /ymir-workplace/ymir-data/logs/*
 
 sudo docker exec -it docker_web_1 sh
 sudo docker exec -it docker_backend_1 bash

@@ -409,3 +409,47 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 157, in wrapper
     raise exc
 ValueError: (['git', 'rev-parse', 'dataset-training@filtered:metadatas.mir'], 128, b"fatal: Invalid object name 'dataset-training@filtered'.", b'dataset-training@filtered:metadatas.mir')
+
+[t0000001000002dcf65a1653462788 eb0238e] task failed
+ 5 files changed, 25 deletions(-)
+ rewrite annotations.mir (99%)
+ rewrite keywords.mir (100%)
+ rewrite metadatas.mir (100%)
+ rewrite tasks.mir (99%)
+|-_commit_error costs 0.03s(0.00m).
+command failed: t0000001000002dcf65a1653462788@t0000001000002dcf65a1653462788; exc: [Errno 13] Permission denied: 'nvidia-docker'
+trace: cmd exception: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/mir/tools/command_run_in_out.py", line 95, in wrapper
+    ret = f(mir_root=mir_root, src_revs=src_revs, dst_rev=dst_rev, work_dir=work_dir, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/training.py", line 356, in run_with_args
+    _run_train_cmd(cmd, out_log_path=os.path.join(work_dir_out, mir_settings.EXECUTOR_OUTLOG_NAME))
+  File "/usr/local/lib/python3.8/dist-packages/mir/commands/training.py", line 93, in _run_train_cmd
+    subprocess.run(cmd, check=True, stdout=f, stderr=f, text=True)
+  File "/usr/lib/python3.8/subprocess.py", line 493, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.8/subprocess.py", line 1704, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+PermissionError: [Errno 13] Permission denied: 'nvidia-docker'
+
+ERROR:fastapi:[viz] failed to get model info: b'{"code":140402,"message":"model t0000001000002dcf65a1653462788 not found"}\n'
+ERROR:fastapi:[update task] failed to get model from task
+Traceback (most recent call last):
+  File "/app/ymir_app/app/libs/tasks.py", line 219, in model_info
+    result = self.viz.get_model()
+  File "/app/ymir_app/app/utils/ymir_viz.py", line 193, in get_model
+    res = self.parse_resp(resp)
+  File "/app/ymir_app/app/utils/ymir_viz.py", line 225, in parse_resp
+    raise ModelNotFound()
+app.api.errors.errors.ModelNotFound
+
+ERROR   : [20220525-07:13:49] base.py:131:run_job(): Job "lable_task_monitor (trigger: interval[0:00:10], next run at: 2022-05-25 07:15:24 UTC)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "ymir_controller/controller/label_project_monitor.py", line 63, in lable_task_monitor
+    label_instance = utils.create_label_instance()
+  File "/app/ymir_controller/controller/utils/utils.py", line 97, in create_label_instance
+    raise ValueError("Error! Please setting your label tools")
+ValueError: Error! Please setting your label tools
