@@ -158,6 +158,19 @@ sudo systemctl restart docker
 sudo chattr -i /usr/bin
 sudo yum install nvidia-docker2
 sudo yum install -y nvidia-docker2
+
+lsattr /usr
+-------------e-- /usr/lib
+-------------e-- /usr/etc
+-------------e-- /usr/local
+-------------e-- /usr/games
+-------------e-- /usr/share
+----------I--e-- /usr/bin
+-------------e-- /usr/libexec
+-------------e-- /usr/src
+----------I--e-- /usr/lib64
+----------I--e-- /usr/sbin
+-------------e-- /usr/include
 ```
 
 ```

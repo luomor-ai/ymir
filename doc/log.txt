@@ -549,3 +549,15 @@ Complete!
 
 error: unpacking of archive failed on file /usr/bin/nvidia-docker: cpio: rename
 chattr -i /usr/bin
+lsattr /usr
+-------------e-- /usr/lib
+-------------e-- /usr/etc
+-------------e-- /usr/local
+-------------e-- /usr/games
+-------------e-- /usr/share
+----------I--e-- /usr/bin
+-------------e-- /usr/libexec
+-------------e-- /usr/src
+----------I--e-- /usr/lib64
+----------I--e-- /usr/sbin
+-------------e-- /usr/include
