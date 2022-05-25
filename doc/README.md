@@ -14,7 +14,7 @@ sudo docker pull industryessentials/executor-det-yolov4-training:release-0.5.0
 sudo docker pull industryessentials/executor-det-yolov4-training
 sudo docker pull industryessentials/executor-det-yolov4-mining:release-0.5.0
 
-sudo docker pull industryessentials/executor-det-yolov4-mining:release-1.1.0
+sudo docker pull industryessentials/executor-det-yolov4-training:release-1.1.0
 sudo docker pull industryessentials/executor-det-yolov4-mining:release-1.1.0
 sudo docker images|grep industryessentials
 
@@ -88,6 +88,7 @@ mir train -w /tmp/ymir/training/train-0 \
           --executor industryessentials/executor-det-yolov4-training:release-1.1.0 # 训练镜像
 
 docker run -it --rm industryessentials/executor-det-yolov4-training:release-1.1.0 bash
+nvidia-docker run -it --rm industryessentials/executor-det-yolov4-training:release-1.1.0 bash
 
 http://49.232.6.131:8075/
 admin@7otech.com
