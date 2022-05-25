@@ -160,6 +160,8 @@ sudo chattr -i /usr/bin
 sudo yum install nvidia-docker2
 sudo yum install -y nvidia-docker2
 
+sudo nvidia-docker run --rm nvidia/cuda:10.0-devel nvidia-smi
+
 lsattr /usr
 -------------e-- /usr/lib
 -------------e-- /usr/etc
