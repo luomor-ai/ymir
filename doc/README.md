@@ -179,6 +179,9 @@ lsattr /usr
 ----------I--e-- /usr/lib64
 ----------I--e-- /usr/sbin
 -------------e-- /usr/include
+
+https://daobook.github.io/pytorch-book/yolo/tutorials/05_pytorch-hub.html
+https://pytorch.org/docs/stable/index.html
 ```
 
 ```
