@@ -146,6 +146,14 @@ docker rmi `docker images | grep none | awk '{print $3}'`
 
 ```shell
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker
+
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+   && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
+   
+yum-config-manager --enable libnvidia-container-experimental
+sudo yum clean expire-cache
+sudo yum install -y nvidia-docker2
+sudo systemctl restart docker
 ```
 
 ```
