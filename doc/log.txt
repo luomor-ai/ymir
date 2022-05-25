@@ -453,3 +453,96 @@ Traceback (most recent call last):
   File "/app/ymir_controller/controller/utils/utils.py", line 97, in create_label_instance
     raise ValueError("Error! Please setting your label tools")
 ValueError: Error! Please setting your label tools
+
+sudo yum install -y nvidia-docker2
+Loaded plugins: fastestmirror, langpacks
+Repository epel is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+docker-ce-stable                                                                                                                      | 3.5 kB  00:00:00
+epel                                                                                                                                  | 4.7 kB  00:00:00
+extras                                                                                                                                | 2.9 kB  00:00:00
+kubernetes                                                                                                                            | 1.4 kB  00:00:00
+libnvidia-container/x86_64/signature                                                                                                  |  833 B  00:00:00
+Retrieving key from https://nvidia.github.io/libnvidia-container/gpgkey
+Importing GPG key 0xF796ECB0:
+ Userid     : "NVIDIA CORPORATION (Open Source Projects) <cudatools@nvidia.com>"
+ Fingerprint: c95b 321b 61e8 8c18 09c4 f759 ddca e044 f796 ecb0
+ From       : https://nvidia.github.io/libnvidia-container/gpgkey
+libnvidia-container/x86_64/signature                                                                                                  | 2.1 kB  00:00:00 !!!
+mysql-connectors-community                                                                                                            | 2.6 kB  00:00:00
+mysql-tools-community                                                                                                                 | 2.6 kB  00:00:00
+mysql80-community                                                                                                                     | 2.6 kB  00:00:00
+nodesource                                                                                                                            | 2.5 kB  00:00:00
+os                                                                                                                                    | 3.6 kB  00:00:00
+updates                                                                                                                               | 2.9 kB  00:00:00
+(1/4): updates/7/x86_64/primary_db                                                                                                    |  16 MB  00:00:00
+(2/4): epel/7/x86_64/updateinfo                                                                                                       | 1.0 MB  00:00:00
+(3/4): epel/7/x86_64/primary_db                                                                                                       | 7.0 MB  00:00:00
+(4/4): libnvidia-container/x86_64/primary                                                                                             |  24 kB  00:00:00
+libnvidia-container                                                                                                                                  155/155
+Resolving Dependencies
+--> Running transaction check
+---> Package nvidia-docker2.noarch 0:2.10.0-1 will be installed
+--> Processing Dependency: nvidia-container-toolkit >= 1.9.0-1 for package: nvidia-docker2-2.10.0-1.noarch
+--> Running transaction check
+---> Package nvidia-container-toolkit.x86_64 0:1.9.0-1 will be installed
+--> Processing Dependency: libnvidia-container-tools < 2.0.0 for package: nvidia-container-toolkit-1.9.0-1.x86_64
+--> Processing Dependency: libnvidia-container-tools >= 1.9.0-1 for package: nvidia-container-toolkit-1.9.0-1.x86_64
+--> Running transaction check
+---> Package libnvidia-container-tools.x86_64 0:1.9.0-1 will be installed
+--> Processing Dependency: libnvidia-container1(x86-64) >= 1.9.0-1 for package: libnvidia-container-tools-1.9.0-1.x86_64
+--> Processing Dependency: libnvidia-container.so.1(NVC_1.0)(64bit) for package: libnvidia-container-tools-1.9.0-1.x86_64
+--> Processing Dependency: libnvidia-container.so.1()(64bit) for package: libnvidia-container-tools-1.9.0-1.x86_64
+--> Running transaction check
+---> Package libnvidia-container1.x86_64 0:1.9.0-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================
+ Package                                         Arch                         Version                        Repository                                 Size
+=============================================================================================================================================================
+Installing:
+ nvidia-docker2                                  noarch                       2.10.0-1                       libnvidia-container                       8.7 k
+Installing for dependencies:
+ libnvidia-container-tools                       x86_64                       1.9.0-1                        libnvidia-container                        49 k
+ libnvidia-container1                            x86_64                       1.9.0-1                        libnvidia-container                       1.0 M
+ nvidia-container-toolkit                        x86_64                       1.9.0-1                        libnvidia-container                       1.5 M
+
+Transaction Summary
+=============================================================================================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 2.5 M
+Installed size: 7.4 M
+Downloading packages:
+(1/4): libnvidia-container-tools-1.9.0-1.x86_64.rpm                                                                                   |  49 kB  00:00:04
+(2/4): libnvidia-container1-1.9.0-1.x86_64.rpm                                                                                        | 1.0 MB  00:00:40
+(3/4): nvidia-docker2-2.10.0-1.noarch.rpm                                                                                             | 8.7 kB  00:00:01
+(4/4): nvidia-container-toolkit-1.9.0-1.x86_64.rpm                                                                                    | 1.5 MB  00:00:50
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                         47 kB/s | 2.5 MB  00:00:54
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libnvidia-container1-1.9.0-1.x86_64                                                                                                       1/4
+  Installing : libnvidia-container-tools-1.9.0-1.x86_64                                                                                                  2/4
+  Installing : nvidia-container-toolkit-1.9.0-1.x86_64                                                                                                   3/4
+  Installing : nvidia-docker2-2.10.0-1.noarch                                                                                                            4/4
+Error unpacking rpm package nvidia-docker2-2.10.0-1.noarch
+warning: /etc/docker/daemon.json saved as /etc/docker/daemon.json.rpmorig
+error: unpacking of archive failed on file /usr/bin/nvidia-docker: cpio: rename
+error: nvidia-docker2-2.10.0-1.noarch: install failed
+  Verifying  : libnvidia-container-tools-1.9.0-1.x86_64                                                                                                  1/4
+  Verifying  : nvidia-container-toolkit-1.9.0-1.x86_64                                                                                                   2/4
+  Verifying  : libnvidia-container1-1.9.0-1.x86_64                                                                                                       3/4
+  Verifying  : nvidia-docker2-2.10.0-1.noarch                                                                                                            4/4
+
+Dependency Installed:
+  libnvidia-container-tools.x86_64 0:1.9.0-1            libnvidia-container1.x86_64 0:1.9.0-1            nvidia-container-toolkit.x86_64 0:1.9.0-1
+
+Failed:
+  nvidia-docker2.noarch 0:2.10.0-1
+
+Complete!
