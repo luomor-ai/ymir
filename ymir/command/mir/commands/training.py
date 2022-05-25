@@ -342,8 +342,8 @@ class CmdTrain(base.BaseCommand):
         path_binds.append(f"-v{work_dir_out}:/out")
         path_binds.append(f"-v{tensorboard_dir}:/out/tensorboard")
 
-        # cmd = ['nvidia-docker', 'run', '--rm', f"--shm-size={_get_shm_size(executor_config=executor_config)}"]
-        cmd = ['docker', 'run', '--rm', f"--shm-size={_get_shm_size(executor_config=executor_config)}"]
+        cmd = ['nvidia-docker', 'run', '--rm', f"--shm-size={_get_shm_size(executor_config=executor_config)}"]
+        # cmd = ['docker', 'run', '--rm', f"--shm-size={_get_shm_size(executor_config=executor_config)}"]
         cmd.extend(path_binds)
         if available_gpu_id:
             cmd.extend(['--gpus', f"\"device={available_gpu_id}\""])
