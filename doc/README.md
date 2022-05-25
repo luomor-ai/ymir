@@ -144,6 +144,10 @@ bash ymir.sh start
 docker rmi `docker images | grep none | awk '{print $3}'`
 ```
 
+```shell
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker
+```
+
 ```
 Docker国内镜像
 一、docker pull是直接加镜像
