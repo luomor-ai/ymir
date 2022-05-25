@@ -123,6 +123,8 @@ test2022
 http://49.232.6.131:9004
 labelfree
 root2022
+http://49.232.6.131:9099
+https://label-d.7otech.com/
 
 安防
 fire

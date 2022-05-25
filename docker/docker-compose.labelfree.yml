@@ -22,7 +22,7 @@ services:
       REDIS_HOST: label_redis
       REDIS_PORT: 6379
       REDIS_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      S3_ENDPOINT_URL: ${LABEL_TOOL_HOST_IP}:${LABEL_TOOL_S3_PORT}
+      S3_ENDPOINT_URL: https://label-d.7otech.com/
       S3_SECRET_ACCESS_KEY: ${MYSQL_ROOT_PASSWORD}
       FLASK_APP: labelfree.app
       LABEL_ENV: dev
