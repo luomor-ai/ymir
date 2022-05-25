@@ -546,3 +546,6 @@ Failed:
   nvidia-docker2.noarch 0:2.10.0-1
 
 Complete!
+
+error: unpacking of archive failed on file /usr/bin/nvidia-docker: cpio: rename
+chattr -i /usr/bin
