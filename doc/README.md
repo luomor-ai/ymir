@@ -162,6 +162,7 @@ sudo yum install -y nvidia-docker2
 
 sudo nvidia-docker run --rm nvidia/cuda:10.0-devel nvidia-smi
 sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+docker run --runtime=nvidia --rm -it mxnet/python:nightly_gpu_cu102_py3 bash
 
 lsattr /usr
 -------------e-- /usr/lib
