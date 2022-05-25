@@ -596,3 +596,5 @@ d83a4cfd2808   redis:5.0                              "docker-entrypoint.s…"  
                                                 harbor-log
 465a44683a6d   apache/incubator-doris:build-env-1.2   "/bin/bash"              9 months ago   Up 8 months
                                                 hungry_keldysh
+
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: process_linux.go:545: container init caused: Running hook #1:: error running hook: exit status 1, stdout: , stderr: nvidia-container-cli: initialization error: load library failed: libnvidia-ml.so.1: cannot open shared object file: no such file or directory: unknown.
