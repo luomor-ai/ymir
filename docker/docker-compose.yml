@@ -35,7 +35,7 @@ services:
       # special volumes for start container in container
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
-      - /usr/bin/nvidia-docker:/usr/bin/nvidia-docker
+      # - /usr/bin/nvidia-docker:/usr/bin/nvidia-docker
       - /usr/bin/nvidia-smi:/usr/bin/nvidia-smi
       - /lib64/libltdl.so.7:/lib64/libltdl.so.7
       # app
