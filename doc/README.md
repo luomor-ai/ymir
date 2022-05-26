@@ -117,6 +117,9 @@ sudo docker cp docker_label_nginx_1:/usr/share/nginx/html label-web
 cd label-web && git pull && cd ..
 sudo docker cp label-web/static/js/index.8ef315f2.js docker_label_nginx_1:/usr/share/nginx/html/static/js/index.8ef315f2.js
 
+sudo docker build -t cartoonize .
+sudo docker run -p 8701:8080 cartoonize
+
 http://49.232.6.131:8763/
 https://label.7otech.com/
 admin@7otech.com
