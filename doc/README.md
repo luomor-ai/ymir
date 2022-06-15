@@ -114,6 +114,7 @@ sudo docker-compose -f docker-compose.labelfree.yml logs -f
 
 sudo docker pull heartexlabs/label-studio
 sudo docker-compose -f docker-compose.label_studio.yml up -d
+sudo docker-compose -f docker-compose.label_studio.yml down
 
 sudo docker exec -it docker_label_nginx_1 sh
 sudo docker cp docker_label_nginx_1:/usr/share/nginx/html label-web
