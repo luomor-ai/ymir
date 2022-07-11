@@ -97,6 +97,7 @@ test2022
 ls /ymir-workplace
 sudo rm -rf /ymir-workplace
 
+sudo rm -rf /ymir-workplace/labelfree/
 sudo docker-compose -f docker-compose.labelfree.yml pull
 sudo docker-compose -f docker-compose.labelfree.yml up -d
 sudo docker-compose -f docker-compose.labelfree.yml down
