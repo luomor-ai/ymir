@@ -125,6 +125,9 @@ sudo docker build -t yiluxiangbei/cartoonize .
 sudo docker push yiluxiangbei/cartoonize
 sudo docker run -it -p 8701:8080 yiluxiangbei/cartoonize
 
+sudo chmod -R 777 /ymir-workplace/labelfree/redis-persistence
+sudo chown -R 1001:1001 /ymir-workplace/labelfree/redis-persistence
+
 http://49.232.6.131:8763/
 https://label.7otech.com/
 admin@7otech.com
