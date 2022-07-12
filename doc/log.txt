@@ -598,3 +598,13 @@ d83a4cfd2808   redis:5.0                              "docker-entrypoint.s…"  
                                                 hungry_keldysh
 
 docker: Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: process_linux.go:545: container init caused: Running hook #1:: error running hook: exit status 1, stdout: , stderr: nvidia-container-cli: initialization error: load library failed: libnvidia-ml.so.1: cannot open shared object file: no such file or directory: unknown.
+
+sudo docker-compose -f docker-compose.labelfree.yml ps
+            Name                          Command               State                                         Ports
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+docker_label_api_1             sh /code/entrypoint.sh gun ...   Up
+docker_label_celery_worker_1   sh /code/entrypoint.sh cel ...   Up
+docker_label_minio_1           /usr/bin/docker-entrypoint ...   Up      0.0.0.0:9099->9000/tcp,:::9099->9000/tcp, 0.0.0.0:9004->9001/tcp,:::9004->9001/tcp
+docker_label_mysql_1           docker-entrypoint.sh --cha ...   Up      3306/tcp
+docker_label_nginx_1           /docker-entrypoint.sh ngin ...   Up      0.0.0.0:8763->80/tcp,:::8763->80/tcp
+docker_label_redis_1           docker-entrypoint.sh redis ...   Up      6379/tcp

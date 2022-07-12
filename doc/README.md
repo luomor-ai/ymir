@@ -112,6 +112,7 @@ sudo docker-compose -f docker-compose.labelfree.yml up label_minio
 MYSQL_ROOT_PASSWORD=root2022
 
 sudo docker-compose -f docker-compose.labelfree.yml logs -f
+sudo docker-compose -f docker-compose.labelfree.yml ps
 
 sudo docker pull heartexlabs/label-studio
 sudo docker-compose -f docker-compose.label_studio.yml up -d
