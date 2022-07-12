@@ -121,7 +121,7 @@ sudo docker-compose -f docker-compose.label_studio.yml down
 sudo docker exec -it docker_label_nginx_1 sh
 sudo docker cp docker_label_nginx_1:/usr/share/nginx/html label-web
 cd label-web && git pull && cd ..
-sudo docker cp label-web/static/js/index.8ef315f2.js docker_label_nginx_1:/usr/share/nginx/html/static/js/index.8ef315f2.js
+sudo docker cp label-web/static/js/index.66b17425.js docker_label_nginx_1:/usr/share/nginx/html/static/js/index.66b17425.js
 
 sudo docker build -t yiluxiangbei/cartoonize .
 sudo docker push yiluxiangbei/cartoonize
