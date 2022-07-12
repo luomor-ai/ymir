@@ -17,6 +17,7 @@ services:
       - .env
     volumes:
       - ${BACKEND_SANDBOX_ROOT}:${BACKEND_SANDBOX_ROOT}
+      - ${YMIR_PATH}/labelfree/backend_log:/var/log/gunicorn
     environment:
       SQLALCHEMY_DATABASE_URI: mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@label_mysql:3306/labelfree
       REDIS_HOST: label_redis
@@ -33,9 +34,11 @@ services:
 
   label_celery_worker:
     image: labelfree/open:latest
-    command: celery -A labelfree.app.celery worker -l info 
+    command: celery -A labelfree.app.celery worker -l info
     env_file:
       - .env
+    volumes:
+      - ${BACKEND_SANDBOX_ROOT}:${BACKEND_SANDBOX_ROOT}
     environment:
       SQLALCHEMY_DATABASE_URI: mysql+pymysql://root:${MYSQL_ROOT_PASSWORD}@label_mysql:3306/labelfree
       REDIS_HOST: label_redis
@@ -69,11 +72,10 @@ services:
     restart: always
 
   label_redis:
-    image: bitnami/redis:5.0.4
-    environment:
-      REDIS_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    image: redis:5.0.4
+    command: redis-server --appendonly yes --requirepass ${MYSQL_ROOT_PASSWORD}
     volumes:
-      - ${YMIR_PATH}/labelfree/redis-persistence:/bitnami/redis/data
+      - ${YMIR_PATH}/labelfree/redis-data:/data
     networks:
       - labelfreenetwork
     restart: always
@@ -85,8 +87,6 @@ services:
     environment:
       MINIO_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MINIO_ROOT_USER: labelfree
-      # MINIO_ACCESS_KEY: "minio"
-      # MINIO_SECRET_KEY: "minio123456"
     command: server /data --console-address ":9001"
     ports:
       - ${LABEL_TOOL_S3_PORT}:9000
