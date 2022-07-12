@@ -127,6 +127,9 @@ sudo docker build -t yiluxiangbei/cartoonize .
 sudo docker push yiluxiangbei/cartoonize
 sudo docker run -it -p 8701:8080 yiluxiangbei/cartoonize
 
+docker commit -a "labelfree" -m "labelfree" cb766e361075 yiluxiangbei/labelfree_open_frontend:v1
+docker push yiluxiangbei/labelfree_open_frontend:v1
+
 sudo chmod -R 777 /ymir-workplace/labelfree/redis-persistence
 sudo chown -R 1001:1001 /ymir-workplace/labelfree/redis-persistence
 
