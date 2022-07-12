@@ -608,3 +608,43 @@ docker_label_minio_1           /usr/bin/docker-entrypoint ...   Up      0.0.0.0:
 docker_label_mysql_1           docker-entrypoint.sh --cha ...   Up      3306/tcp
 docker_label_nginx_1           /docker-entrypoint.sh ngin ...   Up      0.0.0.0:8763->80/tcp,:::8763->80/tcp
 docker_label_redis_1           docker-entrypoint.sh redis ...   Up      6379/tcp
+
+sudo docker exec -it docker_label_mysql_1 bash
+mysql -h127.0.0.1 -uroot -p
+show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| labelfree          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+use labelfree
+show tables;
++---------------------+
+| Tables_in_labelfree |
++---------------------+
+| alembic_version     |
+| annotation          |
+| attachments         |
+| datasets            |
+| export              |
+| image_annotation    |
+| images              |
+| label_system        |
+| menus               |
+| project             |
+| project_group       |
+| role_permission     |
+| roles               |
+| storage             |
+| user_role           |
+| users               |
++---------------------+
+16 rows in set (0.00 sec)
+
+delete from users where id=1;
+update user_role set user_id=2,role_id=1 where id=2;
