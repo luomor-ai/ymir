@@ -122,6 +122,13 @@ sudo docker exec -it docker_label_nginx_1 sh
 sudo docker cp docker_label_nginx_1:/usr/share/nginx/html label-web
 cd label-web && git pull && cd ..
 sudo docker cp label-web/static/js/index.66b17425.js docker_label_nginx_1:/usr/share/nginx/html/static/js/index.66b17425.js
+sudo docker cp label-web/index.html docker_label_nginx_1:/usr/share/nginx/html/index.html
+
+sudo docker cp label-studio-web/user_base.html  docker_label-studio_1:/label-studio/label_studio/users/templates/users/user_base.html
+sudo docker cp label-studio-web/base.html  docker_label-studio_1:/label-studio/label_studio/templates/base.html
+sudo docker cp label-studio-web/simple.html  docker_label-studio_1:/label-studio/label_studio/templates/simple.html
+sudo docker cp label-studio-web/logo-black.svg docker_label-studio_1:/label-studio/label_studio/core/static/icons/logo-black.svg
+sudo docker cp label-studio-web/logo-black.svg docker_label-studio_1:/label-studio/label_studio/core/static_build/icons/logo-black.svg
 
 sudo docker build -t yiluxiangbei/cartoonize .
 sudo docker push yiluxiangbei/cartoonize
